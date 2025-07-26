@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+openai
+python-dotenv
+requests
+chromadb
+numpy
+scikit-learn
+tqdm
+autogen
+sqlite3

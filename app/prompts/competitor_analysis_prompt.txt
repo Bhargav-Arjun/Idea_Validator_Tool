@@ -1,0 +1,23 @@
+You are an expert in startup market analysis and VC research.
+
+Analyze the following product idea against web data (RAG output). Extract known competitors and compare their features.
+
+Input Idea:
+"{idea}"
+
+Search Results:
+{docs}
+
+Respond in this JSON format:
+{
+  "identified_competitors": [
+    {
+      "name": "<product/startup>",
+      "key_features": ["..."],
+      "customer_segments": ["..."],
+      "link": "<if available>"
+    }
+  ],
+  "market_gaps": ["..."],
+  "summary": "<short summary of the analysis>"
+}

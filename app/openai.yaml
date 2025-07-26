@@ -1,0 +1,43 @@
+openapi: 3.0.1
+info:
+  title: Idea Validator Tool
+  description: >
+    A multi-agent AI tool to evaluate your startup or product idea. 
+    It validates clarity, finds market competition, and gives a scorecard with feedback.
+  version: "1.0.0"
+
+servers:
+  - url: https://your-server-url.com  # Replace with actual deployed server URL (e.g., Render, Vercel, Railway)
+
+paths:
+  /validate_idea:
+    post:
+      summary: Validate a business idea and get market insights
+      operationId: validateIdea
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                idea:
+                  type: string
+                  description: A paragraph describing your startup or product idea
+      responses:
+        '200':
+          description: Validation and analysis response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  final_scorecard:
+                    type: object
+                    description: Overall score with verdict and suggestions
+                  trace:
+                    type: object
+                    description: Debug details from each agent
+
+components:
+  schemas: {}
